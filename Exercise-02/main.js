@@ -1,21 +1,20 @@
 console.log(`exercise 2`);
 
+
+let maxNumber = []
 let numbers = [];
 for(i = 0; i < 5; i++){
-    numbers[numbers.length] = prompt(`Input a number`);
+    numbers[numbers.length] = prompt(`Input number ${numbers.length + 1}`);
     numbers[i] = Number(numbers[i]);
-    console.log(numbers);
-}
-
-debugger;
-
-let maxNumber;
-for(i = 0; i < 4; i++){
-    if(numbers[i] < maxNumber){
+    if(maxNumber > numbers[i]){
         maxNumber = maxNumber;
-        console.log(maxNumber);
     }else{
         maxNumber = numbers[i];
-        console.log(maxNumber);
     }
 }
+
+console.log(numbers);
+console.log(maxNumber);
+
+alert(`The maximum value is ${maxNumber}`);
+
